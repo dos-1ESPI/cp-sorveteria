@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Home from "./pages/Home";
 import Produtos from "./pages/Produtos";
 
+
 export default function App() {
   return (
     <BrowserRouter>
