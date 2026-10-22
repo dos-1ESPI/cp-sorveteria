@@ -1,14 +1,16 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import Home from "./pages/Home";
+import Produtos from "./pages/Produtos";
 
-// Import de componentes
-import Footer from './components/Footer'
-
-const App = () => {
+export default function App() {
   return (
-    <>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Produtos />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App

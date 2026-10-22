@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap");
 @import "tailwindcss";
 
-* {
-  font-family: "DM Sans", sans-serif;
+@theme {
+  --color-chocolate: #3A1F17;
+  --color-baunilha: #FFF7EE;
+  --color-morango: #C23A5E;
+  --color-pistache: #A9D8BE;
+  --color-casquinha: #F2C987;
+  --font-display: "Fredoka", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
 }
