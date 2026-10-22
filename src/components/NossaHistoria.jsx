@@ -3,7 +3,7 @@ import flavor from '../assets/flavor.jpg'
 
 const NossaHistoria = () => {
     return (
-        <section className="bg-[#FFF7EE] text-[#3A1F17]">
+        <section id="sobre" className="scroll-mt-24 bg-[#FFF7EE] text-[#3A1F17]">
             <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <img
                     src={flavor}

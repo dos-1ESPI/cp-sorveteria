@@ -10,7 +10,6 @@ export default function Produtos() {
 
   return (
     <main>
-      <NavBar/>
       <Filtro
         filtro={filtro}
         setFiltro={setFiltro}

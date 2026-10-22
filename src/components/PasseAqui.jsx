@@ -2,7 +2,7 @@ import mapa from '../assets/mapa.jpg'
 
 const OndeEstamos = () => {
     return (
-        <section className="bg-[#FFF7EE] text-[#3A1F17]">
+        <section id="onde-estamos" className="scroll-mt-24 bg-[#FFF7EE] text-[#3A1F17]">
             <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
                 <div>
                     <p className="text-xs font-bold uppercase text-[#C8415C]">Onde estamos</p>

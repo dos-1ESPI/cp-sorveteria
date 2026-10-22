@@ -6,7 +6,6 @@ const links = [
   { label: "Início", to: "/" },
 
   { label: "Monte seu pote", to: "/produtos" },
-  { label: "Encomendas", to: "/produtos" },
   { label: "Sobre", to: "/#sobre" },
   { label: "Onde estamos", to: "/#onde-estamos" },
 ];
