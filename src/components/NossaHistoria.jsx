@@ -1,3 +1,4 @@
+import React from 'react'
 import flavor from '../assets/flavor.jpg'
 
 const NossaHistoria = () => {
