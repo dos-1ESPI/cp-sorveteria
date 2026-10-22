@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 
 const links = [
   { label: "Início", to: "/" },
+
   { label: "Monte seu pote", to: "/produtos" },
   { label: "Encomendas", to: "/produtos" },
   { label: "Sobre", to: "/#sobre" },
@@ -83,7 +84,6 @@ export default function NavBar() {
           <span className={`h-0.5 w-6 bg-chocolate transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </div>
-
       {open && (
         <nav
           id="menu-mobile"
