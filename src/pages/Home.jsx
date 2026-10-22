@@ -4,6 +4,8 @@ import SaboresSemana from "../components/SaboresSemana";
 import MontePote from "../components/MontePote";
 import Footer from '../components/Footer'
 import NossaHistoria from '../components/NossaHistoria'
+import Orcamento from '../components/Orcamento'
+import PasseAqui from '../components/PasseAqui'
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <SaboresSemana/>
       <MontePote/>
       <NossaHistoria/>
+      <Orcamento/>
+      <PasseAqui/>
       <Footer/>
     </div>
   )
