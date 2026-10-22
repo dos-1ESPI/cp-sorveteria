@@ -63,7 +63,7 @@ export default function MontePote() {
                     </ol>
 
                     <Link
-                        to="/monte-seu-pote"
+                         to="/produtos
                         className="mt-8 inline-block rounded-full bg-chocolate px-6 py-3 text-sm font-semibold text-baunilha transition hover:brightness-125"
                     >
                         Montar meu pote
