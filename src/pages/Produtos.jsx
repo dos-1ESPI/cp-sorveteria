@@ -1,9 +1,9 @@
-import React from 'react'
+import Filtro from "../components/Filtro"
 
 const Produtos = () => {
   return (
     <div>
-      
+      <Filtro/>
     </div>
   )
 }
