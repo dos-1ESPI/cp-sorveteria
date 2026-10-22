@@ -4,16 +4,40 @@ import logo from "../assets/logo.png";
 
 const links = [
   { label: "Início", to: "/" },
-  { label: "Monte seu pote", to: "/monte-seu-pote" },
-  { label: "Encomendas", to: "/encomendas" },
-  { label: "Sobre", to: "/sobre" },
-  { label: "Onde estamos", to: "/onde-estamos" },
+  { label: "Monte seu pote", to: "/produtos" },
+  { label: "Encomendas", to: "/produtos" },
+  { label: "Sobre", to: "/#sobre" },
+  { label: "Onde estamos", to: "/#onde-estamos" },
 ];
 
-// Estilo do link: muda de cor quando a rota está ativa
 const linkClass = ({ isActive }) =>
   `transition-colors hover:text-morango ${isActive ? "text-morango font-semibold" : "text-chocolate"
   }`;
+
+function ItemMenu({ link, onClick, extraClass = "" }) {
+  if (link.to.includes("#")) {
+    return (
+      <Link
+        to={link.to}
+        onClick={onClick}
+        className={`${extraClass} ${linkClass({ isActive: false })}`}
+      >
+        {link.label}
+      </Link>
+    );
+  }
+
+  return (
+    <NavLink
+      to={link.to}
+      end={link.to === "/"}
+      onClick={onClick}
+      className={(state) => `${extraClass} ${linkClass(state)}`}
+    >
+      {link.label}
+    </NavLink>
+  );
+}
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -32,10 +56,8 @@ export default function NavBar() {
         <nav aria-label="Navegação principal" className="hidden md:block">
           <ul className="flex items-center gap-8 text-sm">
             {links.map((link) => (
-              <li key={link.to}>
-                <NavLink to={link.to} end={link.to === "/"} className={linkClass}>
-                  {link.label}
-                </NavLink>
+              <li key={link.label}>
+                <ItemMenu link={link} />
               </li>
             ))}
           </ul>
@@ -70,15 +92,8 @@ export default function NavBar() {
         >
           <ul className="flex flex-col">
             {links.map((link) => (
-              <li key={link.to}>
-                <NavLink
-                  to={link.to}
-                  end={link.to === "/"}
-                  onClick={close}
-                  className={(state) => `block py-3 ${linkClass(state)}`}
-                >
-                  {link.label}
-                </NavLink>
+              <li key={link.label}>
+                <ItemMenu link={link} onClick={close} extraClass="block py-3" />
               </li>
             ))}
           </ul>
